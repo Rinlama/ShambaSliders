@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./script.js"></script>
+  </head>
+  <body>
+    <div id="ShambaSlider">
+      <div class="ss-sliders">
+        <div>
+          <img
+            src="https://photos.mandarinoriental.com/is/image/MandarinOriental/paris-2017-home?wid=2880&hei=1280&fmt=jpeg&crop=9,336,2699,1200&anchor=1358,936&qlt=75,0&fit=wrap&op_sharpen=0&resMode=sharp2&op_usm=0,0,0,0&iccEmbed=0&printRes=72"
+            title="Funky roots 1"
+          />
+          <span class="ss-img-title">Funky roots 1 asdfasdf</span>
+        </div>
+        <div>
+          <img
+            src="https://www.welcomenepal.com/uploads/slider/everest-tkelly.jpeg"
+            title="Nepal 2"
+          />
+          <span class="ss-img-title">Nepal 2</span>
+        </div>
+        <div>
+          <img
+            src="https://i.ytimg.com/vi/LF0wJgg6WCk/maxresdefault.jpg"
+            title="Nepal 3"
+          />
+          <span class="ss-img-title">Nepal 3</span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(() => {
+        let sliders = {
+          animation: "slide",
+          interval: { auto: false, time: 2000 }
+        };
+        $("#ShambaSlider").shambaSlider(sliders);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,211 @@
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+body {
+  background: white;
+  margin: 0%;
+  padding: 0%;
+}
+
+#ShambaSlider {
+  width: 600px;
+  height: 430px;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+#ShambaSlider .ss-sliders img {
+  width: 100%;
+  height: 100%;
+}
+.ss-sliders div {
+  width: 600px;
+  height: 400px;
+  position: absolute;
+  box-sizing: border-box;
+  /* border: solid 6px white;
+  box-shadow: 0 0 5px #ccc; */
+}
+#ShambaSlider .ss-sliders .ss-img-title {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #474747;
+  right: 0;
+  font-size: 20px;
+  color: white;
+  padding: 7px 20px 19px 20px;
+}
+/* buttons */
+
+#ss-next-btn {
+  z-index: 1;
+  position: absolute;
+  top: 45%;
+  right: 1%;
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
+  background: #474747;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+}
+#ss-next-btn .fa,
+#ss-pre-btn .fa {
+  padding: 5px 6px;
+}
+
+#ss-pre-btn {
+  z-index: 1;
+  position: absolute;
+  top: 45%;
+  left: 1%;
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
+  background: #474747;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+}
+
+/* sliders btn */
+.ss-btn {
+  background: #474747;
+  position: absolute;
+  z-index: 1;
+  width: 50px;
+  height: 1px;
+  bottom: 10px;
+  cursor: pointer;
+}
+
+/* Animation Start */
+.slideInLeft {
+  animation: slideleft-animate 1s ease;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+}
+@keyframes slideleft-animate {
+  0% {
+    opacity: 1;
+    transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0%, 0, 0);
+  }
+}
+.slideInRight {
+  opacity: 0;
+  animation: slideright-animate 1s ease;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+}
+@keyframes slideright-animate {
+  0% {
+    opacity: 1;
+    transform: translate3d(100%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0%, 0, 0);
+  }
+}
+
+.fadeOut {
+  animation: fadeout-animate 1s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+}
+@keyframes fadeout-animate {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.fadeIn {
+  animation: fadein-animate 1s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+}
+@keyframes fadein-animate {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.slidedown {
+  opacity: 0;
+  animation: slidedown-animate 1s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+}
+@keyframes slidedown-animate {
+  0% {
+    opacity: 0;
+    transform: translate3d(0%, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0%, 0, 0);
+  }
+}
+
+.slideup {
+  opacity: 0;
+  animation: slidedown-slideup 1s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+}
+@keyframes slidedown-slideup {
+  0% {
+    opacity: 0;
+    transform: translate3d(0%, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0%, 0, 0);
+  }
+}
+.slideOutLeft {
+  animation: slideOutLeftAnimate 1s ease;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+}
+
+@-webkit-keyframes slideOutLeftAnimate {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+@keyframes slideOutRightAnimate {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+.slideOutRight {
+  animation: slideOutRightAnimate 1s ease;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+}
