@@ -105,10 +105,8 @@ function ShambaClass(selectedObject, options) {
     }
     let currentobj = this.shamba.eq(this.current);
 
-    previous.removeClass("fadeOut");
-    currentobj.removeClass("fadeOut");
-    previous.removeClass("fadeIn");
-    currentobj.removeClass("fadeIn");
+    this.removeSlidersClass(previous);
+    this.removeSlidersClass(currentobj);
 
     previous.addClass("fadeOut");
     currentobj.addClass("fadeIn");
