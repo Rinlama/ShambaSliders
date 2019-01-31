@@ -1,6 +1,5 @@
 (function($) {
   $.fn.shambaSlider = function(options) {
-    // this.css("color", "green");
     let ss = new ShambaClass(this, options);
     ss.initShamba();
     return this;
